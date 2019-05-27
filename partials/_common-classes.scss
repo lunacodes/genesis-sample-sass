@@ -1,82 +1,55 @@
 /* Common Classes
----------------------------------------*/
+---------------------------------------------------------------------------- */
 
 /* Avatar
 --------------------------------------------- */
 
 .avatar {
-	float: left;
 	border-radius: 50%;
+	float: left;
+}
 
-	.author-box &,
-	.alignleft & {
-		margin-right: 20px;
-	}
+.author-box .avatar,
+.alignleft .avatar {
+	margin-right: 20px;
+}
 
-	.alignright & {
-		margin-left: 20px;
-	}
+.alignright .avatar {
+	margin-left: 20px;
+}
 
-	.comment & {
-		margin: 0 15px 20px 0;
-	}
+.comment .avatar {
+	margin: 0 15px 20px 0;
 }
 
 /* Genesis
 --------------------------------------------- */
 
-.after-entry {
+.after-entry,
+.archive-description,
+.author-box {
 	margin-bottom: 40px;
+}
+
+.after-entry {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 20px 30px;
-	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
+}
 
-	@media only screen and (min-width: $standard-screen-width) {
-		margin-bottom: 60px;
-		padding: 40px 60px;
-	}
-
-	.widget:last-of-type {
-		margin-bottom: 0;
-	}
+.after-entry .widget:last-of-type {
+	margin-bottom: 0;
 }
 
 .breadcrumb {
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
 	margin-bottom: 40px;
 	padding-bottom: 10px;
-	border-bottom: $border-width $border-style $border-color;
-	font-size: $breadcrumb--font-size;
 }
 
-.archive-description {
-	margin-bottom: 40px;
-
-	@media only screen and (min-width: $standard-screen-width) {
-		margin-bottom: 60px;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
-
-	.entry-title {
-		margin-bottom: 10px;
-		font-size: $archive-author-box__entry-title--font-size;
-		font-weight: $font-weight--semibold;
-	}
-}
-
-.author-box {
-	margin-bottom: 40px;
-
-	@media only screen and (min-width: $standard-screen-width) {
-		margin-bottom: 60px;
-		padding: 30px;
-		background-color: $author-box--background-color;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
 }
 
 /* Search Form
@@ -87,8 +60,8 @@
 }
 
 .entry-content .search-form {
-	width: 50%;
 	margin-bottom: 40px;
+	width: 50%;
 }
 
 .post-password-form input[type="submit"],
@@ -97,49 +70,46 @@
 }
 
 .widget_search input[type="submit"] {
+	border: 0;
 	clip: rect(0, 0, 0, 0);
-	position: absolute;
-	width: 1px;
 	height: 1px;
 	margin: -1px;
 	padding: 0;
-	border: 0;
+	position: absolute;
+	width: 1px;
 }
 
 /* Titles
 --------------------------------------------- */
 
+.archive-description .entry-title,
 .archive-title,
 .author-box-title {
+	font-size: 20px;
+	font-weight: 600;
 	margin-bottom: 10px;
-	font-size: $archive-author-box__entry-title--font-size;
-	font-weight: $font-weight--semibold;
 }
 
 .entry-title {
+	font-size: 30px;
 	margin-bottom: 10px;
-	font-size: $entry-title--font-size;
-
-	a {
-		color: $entry-title__link--font-color;
-		text-decoration: none;
-	}
-
-	a:focus,
-	a:hover {
-		color: $entry-title__link--font-color-hover;
-	}
 }
 
+.entry-title a,
 .sidebar .widget-title a {
-	color: $sidebar__widget-title--font-color;
+	color: #333;
 	text-decoration: none;
 }
 
+.entry-title a:focus,
+.entry-title a:hover {
+	color: #0073e5;
+}
+
 .widget-title {
+	font-size: 18px;
+	font-weight: 600;
 	margin-bottom: 20px;
-	font-size: $widget-title--font-size;
-	font-weight: $font-weight--semibold;
 }
 
 /* WordPress
@@ -195,9 +165,9 @@ img.alignright,
 
 .gallery-caption,
 .wp-caption-text {
+	font-size: 14px;
+	font-weight: 600;
 	margin: 0;
-	font-size: $entry-content__caption--font-size;
-	font-weight: $font-weight--semibold;
 	text-align: center;
 }
 

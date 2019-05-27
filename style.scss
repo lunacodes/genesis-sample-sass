@@ -5,14 +5,14 @@
 	Author: StudioPress
 	Author URI: https://www.studiopress.com/
 
-	Version: 2.6.0
+	Version: 2.10.0
 
-	Tags: one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+	Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
 	Template: genesis
 
-	License: GPL-2.0+
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	License: GPL-2.0-or-later
+	License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 	Text Domain: genesis-sample
 */
@@ -29,9 +29,7 @@
 	- Gallery
 	- Forms
 	- Tables
-	- Accessibility
-		- Screen Reader Text
-		- Skip Links
+	- Screen Reader Text
 - Structure and Layout
 	- Site Container
 	- Site Inner
@@ -46,7 +44,8 @@
 - Plugins
 	- Genesis eNews Extended
 	- Genesis Simple FAQ
-	- Jetpack
+	- WPForms
+- Skip Links
 - Site Header
 	- Title Area
 - Site Navigation
@@ -61,8 +60,22 @@
 - Sidebar
 - Footer Widgets
 - Site Footer
-- Custom Styles
-- Homepage Styles
+- Media Queries
+	- Min-width: 480px
+		- Table
+	- Min-width: 960px
+		- Site Header
+		- Genesis Menu
+		- Responsive Menu
+		- Header Menu
+		- Site Inner
+		- Content
+		- Sidebar
+		- Author Box
+		- After Entry
+		- Column Classes
+		- Entry Misc.
+		- Footer Widgets
 - Print Styles
 */
 
@@ -73,11 +86,13 @@
 @import "partials/common-classes";
 @import "partials/widgets";
 @import "partials/plugins";
+@import "partials/skip-links";
 @import "partials/header";
 @import "partials/menu";
 @import "partials/content-area";
 @import "partials/sidebar";
 @import "partials/footer-area";
+@import "partials/media";
 @import "partials/custom";
 @import "partials/home";
 @import "partials/print";

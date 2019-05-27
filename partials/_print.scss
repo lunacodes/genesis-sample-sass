@@ -1,14 +1,14 @@
 /* Print Styles
---------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 @media print {
 
 	*,
-	*:before,
-	*:after {
-		color: #333 !important;
+	*::before,
+	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
+		color: #333 !important;
 		text-shadow: none !important;
 	}
 
@@ -17,17 +17,17 @@
 		text-decoration: underline;
 	}
 
-	a[href]:after {
+	a[href]::after {
 		content: " (" attr(href) ")";
 	}
 
-	abbr[title]:after {
+	abbr[title]::after {
 		content: " (" attr(title) ")";
 	}
 
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after,
-	.site-title > a:after {
+	a[href^="javascript:"]::after,
+	a[href^="#"]::after,
+	.site-title > a::after {
 		content: "";
 	}
 
@@ -90,8 +90,8 @@
 	}
 
 	.title-area {
-		width: 100%;
 		text-align: center;
+		width: 100%;
 	}
 
 	.site-title > a {
@@ -101,9 +101,8 @@
 	}
 
 	.site-inner {
-		position: relative;
-		top: -100px;
 		padding-top: 0;
+		position: relative;
 	}
 
 	.author-box {
@@ -122,6 +121,7 @@
 		widows: 3;
 	}
 
+
 	img {
 		page-break-after: avoid;
 		page-break-inside: avoid;
@@ -138,4 +138,5 @@
 	ul {
 		page-break-before: avoid;
 	}
+
 }
